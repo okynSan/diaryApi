@@ -9,9 +9,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
+@EnableTransactionManagement
 public class BasicApplicationTests {
 
     @Autowired
@@ -27,9 +29,9 @@ public class BasicApplicationTests {
     @Rollback(false)
     public void saveNewUserTest() {
         User newUser = new User();
-        newUser.setFirstName("Andrey");
-        newUser.setLastName("Zatvornickiy");
-        newUser.setName("andrey_zatvornickiy");
+        newUser.setFirstName("Andrey112313");
+        newUser.setLastName("Zatvornickiy233");
+        newUser.setName("asdasd");
         newUser.setPassword("starLight");
 
         int a = iUserDao.saveNewUser(newUser);
